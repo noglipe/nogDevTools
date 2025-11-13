@@ -1,24 +1,26 @@
 /**
  * Converte uma data para o formato "DD/MM/YYYY".
- * Aceita tanto strings no formato "YYYY-MM-DD" quanto "YYYY-MM-DDTHH:mm:ss.sssZ".
+ * Aceita:
+ *  - Objeto Date (usa toISOString)
+ *  - String no formato "YYYY-MM-DD" ou "YYYY-MM-DDTHH:mm:ss.sssZ"
  *
- * @param data String ou Date representando a data.
+ * @param data Data no formato string ou Date.
  * @returns Data formatada no padrão brasileiro ("DD/MM/YYYY").
  */
 export function formatarDataPrisma(data: string | Date): string {
   if (!data) return "";
 
-  // Se já for um objeto Date, usa diretamente
-  const dateObj = data instanceof Date ? data : new Date(data);
+  let dataStr: string;
 
-  // Valida se é uma data válida
-  if (isNaN(dateObj.getTime())) {
+  // Se for um objeto Date → converte para ISO string
+  if (data instanceof Date) {
+    dataStr = data.toISOString().slice(0, 10); // "YYYY-MM-DD"
+  } else if (typeof data === "string") {
+    // Se for string → pega apenas os 10 primeiros caracteres
+    dataStr = data.slice(0, 10); // Garante "YYYY-MM-DD"
+  } else {
     return "";
   }
 
-  const dia = String(dateObj.getDate()).padStart(2, "0");
-  const mes = String(dateObj.getMonth() + 1).padStart(2, "0");
-  const ano = dateObj.getFullYear();
-
-  return `${dia}/${mes}/${ano}`;
+  return dataStr.split("-").reverse().join("/");
 }

@@ -1,7 +1,7 @@
-import * as nogDevTools from "./all";
+import * as nogDevTools from "./all.js";
 
-// Exporta nomeadamente (ex: import { formatarCpf })
-export * from "./all";
+// Exporta nomeadamente
+export * from "./all.js";
 
-// Exporta o pacote inteiro como default (ex: import nogDevTools)
+// Exporta o pacote completo como default
 export default nogDevTools;

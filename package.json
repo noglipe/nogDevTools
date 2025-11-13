@@ -1,0 +1,24 @@
+{
+  "name": "@nogueiradev/nogdevtools",
+  "version": "1.0.0",
+  "description": "Biblioteca utilitária para formatação e manipulação de dados em projetos Next.js e Node.",
+  "author": "Filipe Nogueira",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build"
+  },
+  "keywords": [
+    "typescript",
+    "nextjs",
+    "utils",
+    "formatacao",
+    "nogueiradev"
+  ]
+}

@@ -4,7 +4,7 @@ export * from "./funcoes/formatarCnpj";
 export * from "./funcoes/formatarCpfCnpj";
 export * from "./funcoes/formatarTelefone";
 export * from "./funcoes/formatarCelular";
-export * from "./funcoes/formatarDataReverso";
+export * from "./funcoes/formatarDataPrisma";
 export * from "./funcoes/retornarNumeros";
 export * from "./funcoes/obterNumeroSemana";
 export * from "./funcoes/valorPorExtensoEmReais";

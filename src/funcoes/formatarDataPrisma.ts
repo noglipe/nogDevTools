@@ -5,7 +5,7 @@
  * @param data String ou Date representando a data.
  * @returns Data formatada no padrão brasileiro ("DD/MM/YYYY").
  */
-export function formatarDataReverso(data: string | Date): string {
+export function formatarDataPrisma(data: string | Date): string {
   if (!data) return "";
 
   // Se já for um objeto Date, usa diretamente

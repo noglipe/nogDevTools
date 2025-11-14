@@ -8,3 +8,4 @@ export * from "./funcoes/formatarDataPrisma.js";
 export * from "./funcoes/retornarNumeros.js";
 export * from "./funcoes/obterNumeroSemana.js";
 export * from "./funcoes/valorPorExtensoEmReais.js";
+export * from "./funcoes/capitalizeEachWord.js";

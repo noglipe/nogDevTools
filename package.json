@@ -1,6 +1,6 @@
 {
   "name": "@nogueiradev/nogdevtools",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "Biblioteca utilitária para formatação e manipulação de dados em projetos Next.js e Node.",
   "author": "Filipe Nogueira",
   "license": "MIT",
